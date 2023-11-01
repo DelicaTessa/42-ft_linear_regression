@@ -37,11 +37,11 @@ def main():
     mileage = input("What is the mileage of your car? ")
     while mileage.isnumeric() == False:
         print("Only numeric input")
-        mileage = input("What is the mileage of your car?")
+        mileage = input("What is the mileage of your car? ")
 
     predicted_price = pr.predict(float(mileage))
 
-    print("The price of your car is : " + str(predicted_price) + "$")
+    print("The price of your car is: " + str(predicted_price) + "$")
 
     visualizer(mileage, predicted_price, pr.theta0, pr.theta1)
 
