@@ -4,7 +4,7 @@ import numpy as np
 from src import Prediction
 
 
-def visualizer(user_mileage, predicted_price, t0, t1):
+def visualizer(user_mileage, predicted_price):
     try:
         data = pandas.read_csv('./data.csv')
         mileage = np.array(data['km'])
@@ -43,7 +43,7 @@ def main():
 
     print("The price of your car is: " + str(predicted_price) + "$")
 
-    visualizer(mileage, predicted_price, pr.theta0, pr.theta1)
+    visualizer(mileage, predicted_price)
 
 
 if __name__ == "__main__":

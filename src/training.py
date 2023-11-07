@@ -39,7 +39,6 @@ def main():
         theta = [pr.theta0, pr.theta1]
         Cost.append(cost_function(theta[0], theta[1], mileage_norm, price))
 
-    pr.scale(mileage_norm, mileage)
     pr.save_model()
     Yn = pr.theta1 * mileage + pr.theta0
 

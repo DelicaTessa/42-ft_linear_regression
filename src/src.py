@@ -15,14 +15,6 @@ class Prediction():
         self.theta0 -= tmp0
         self.theta1 -= tmp1
 
-    def scale(self, mileage_norm, mileage):
-        price_lr = self.predict(mileage_norm)
-        P1 = [mileage[0], mileage[6]]
-        P2 = [price_lr[0], price_lr[6]]
-
-        self.theta1 = (P2[1] - P2[0]) / (P1[1] - P1[0])
-        self.theta0 = P2[0] - self.theta1 * P1[0]
-
     def save_model(self):
         filename = './model.csv'
         f = open(filename, 'w+')
